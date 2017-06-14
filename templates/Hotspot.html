@@ -1,0 +1,78 @@
+<ion-view >
+    <ion-header-bar class="bar-balanced">
+        <h2 class="title">热点</h2>
+    </ion-header-bar>
+        <ion-tabs class="tabs-striped tabs-top">
+            <ion-tab title="资讯" ng-controller="first">
+                <ion-view>
+                    <ion-content>
+                        <ion-refresher pulling-text="Pull to refresh..."	on-refresh="doRefresh()" spinner="android">
+                        </ion-refresher>
+                        <ion-list>
+                            <ion-item class="item-thumbnail-left" collection-repeat="item in data1" ui-sref="first-details" ng-click="get(item.id)">
+                                <img ng-src="{{item.url}}" style="max-width: 28%" >
+                                <h2 style="margin-left:8%">{{item.name}}</h2>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="新闻" ng-controller="news">
+                <ion-view>
+                    <ion-content>
+                        <ion-refresher pulling-text="Pull to refresh..."	on-refresh="doRefresh()" spinner="android">
+                        </ion-refresher>
+                        <ion-list>
+                            <ion-item class="item-thumbnail-left" collection-repeat="item in data2" ui-sref="news" ng-click="get(item.id)">
+                                <img ng-src="{{item.url}}" style="max-width: 28%" >
+                                <h2 style="margin-left:8%">{{item.name}}</h2>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="杂谈"  ng-controller="talk">
+                <ion-view>
+                    <ion-content>
+                        <ion-refresher pulling-text="Pull to refresh..."	on-refresh="doRefresh()" spinner="android">
+                        </ion-refresher>
+                        <ion-list>
+                            <ion-item class="item-thumbnail-left" collection-repeat="item in data3" ui-sref="talk" ng-click="get(item.id)">
+                                <img ng-src="{{item.url}}" style="max-width: 28%" >
+                                <h2 style="margin-left:8%">{{item.name}}</h2>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="互联网" ng-controller="internet">
+                <ion-view>
+                    <ion-content>
+                        <ion-refresher pulling-text="Pull to refresh..."	on-refresh="doRefresh()" spinner="android">
+                        </ion-refresher>
+                        <ion-list>
+                            <ion-item class="item-thumbnail-left" collection-repeat="item in data4" ui-sref="internet" ng-click="get(item.id)">
+                                <img ng-src="{{item.url}}" style="max-width: 28%" >
+                                <h2 style="margin-left:8%">{{item.name}}</h2>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+            <ion-tab title="财经" ng-controller="economics">
+                <ion-view>
+                    <ion-content>
+                        <ion-refresher pulling-text="Pull to refresh..."	on-refresh="doRefresh()" spinner="android">
+                        </ion-refresher>
+                        <ion-list>
+                            <ion-item class="item-thumbnail-left" collection-repeat="item in data5" ui-sref="economics" ng-click="get(item.id)">
+                                <img ng-src="{{item.url}}" style="max-width: 28%" >
+                                <h2 style="margin-left:8%">{{item.name}}</h2>
+                            </ion-item>
+                        </ion-list>
+                    </ion-content>
+                </ion-view>
+            </ion-tab>
+        </ion-tabs>
+
+</ion-view>

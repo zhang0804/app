@@ -1,0 +1,60 @@
+<ion-view ng-controller="firstctrl">
+    <ion-header-bar class="bar-balanced">
+        <h2 class="title">首页</h2>
+    </ion-header-bar>
+    <ion-content>
+        <header>
+            <div class="row">
+                <ion-slide-box class='slide' does-continue="true" show-pager="true" auto-play="true" slide-interval="1000">
+                    <ion-slide >
+                        <img src="./images/HTML.jpg" >
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="./images/CSS.jpg" >
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="./images/JS.png">
+                    </ion-slide>
+                </ion-slide-box>
+            </div>
+            <div class="row r-h-1" >
+                <div class="col">
+                    <img src="images/HTML5.jpg" class="c-h-1 ">
+                </div>>
+            </div>
+            <div class="row r-h-1" >
+                <div class="col">
+                    <img src="images/react.jpg" class="c-h-1 ">
+                </div>>
+                <div class="col">
+                    <img src="images/vue.jpg" class="c-h-1 ">
+                </div>>
+                <div class="col ">
+                    <img src="images/ionic.jpg" class="c-h-1 ">
+                </div>
+            </div>
+            <div class="row r-h-1" >
+                <div class="col ">
+                    <img src="images/jquery.png" class="c-h-1 ">
+                </div>
+                <div class="col">
+                    <img src="images/ng.png" class="c-h-1 ">
+                </div>>
+            </div>
+        </header>
+        <section >
+            <div>
+                <p class="space"></p>
+                <p class="title">热门推荐</p>
+            </div>
+            <ul class="list">
+                <a class="item item-thumbnail-left" collection-repeat="item in data1" ui-sref="first-details" ng-click="get(item.id)">
+                    <img ng-src="{{item.url}}" style="max-width: 28%" >
+                    <h2 style="margin-left:8%">{{item.name}}</h2>
+
+                </a>
+            </ul>
+
+        </section>
+    </ion-content>
+</ion-view>

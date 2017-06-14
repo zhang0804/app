@@ -1,0 +1,14 @@
+<ion-view ng-controller="cardctrl">
+    <ion-header-bar class="bar-balanced">
+        <h2 class="title">技术社区(左滑删除)</h2>
+        <a class="button icon icon ion-compose" ng-click="openModal()"></a>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+                <ion-item ng-repeat="item in skill"  href="#/tabs/card-details"  nav-transition="android" nav-direction="forward">
+                    <h1 style="font-size:16px;">{{item}}</h1>
+                    <ion-option-button class=" button button-assertive icon ion-android-delete" ng-click="del(item)">删除</ion-option-button>
+                </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

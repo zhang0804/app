@@ -1,0 +1,28 @@
+<ion-view title="sign" ng-controller="Signcontroller">
+    <ion-header-bar class="bar-positive"  >
+        <h1 class="title" style="height:100px"> Web App</h1>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <ul class="list padding">
+            <li class="item-image padding">
+                <img src="images/people.png" style="width:100px;height:100px">
+            </li>
+            <li class="item item-input item-icon-left item-icon-right ">
+                <i class="icon ion-android-person"></i>
+                <span class="input-label" style="padding-left:30px">用户名:</span>
+                <input id="user" type="text" placeholder="请输入用户名称">
+                <i class="icon ion-ios-close-outline" ng-click="del(1)"></i>
+            </li>
+            <li class="item item-input item-icon-left item-icon-right">
+                <i class="icon ion-key"></i>
+                <span class="input-label" style="padding-left:30px">登录密码:</span>
+                <input id="word" type="text" placeholder="请输入你的密码">
+                <i class="icon ion-ios-close-outline" ng-click="del()"></i>
+            </li>
+            <li class="padding">
+                <a class="button button-block button-positive "style="font-size:150%" ng-click="test()">登录</a>
+            </li>
+            <p ng-click="showAlert()" style="text-decoration: underline;text-align: center;color:red;">忘记密码</p>
+        </ul>
+    </ion-content>
+</ion-view>

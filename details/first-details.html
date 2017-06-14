@@ -1,0 +1,13 @@
+<ion-view >
+    <ion-header-bar class="bar-balanced">
+        <a class="button button-clear icon ion-arrow-left-c" ng-click="$ionicGoBack()">返回</a>
+        <h2 class="title">详情资讯</h2>
+    </ion-header-bar>
+    <ion-content>
+        <h3 style="text-align: center">{{data1[id].name}}</h3>
+        <p>
+            {{firstDetails[id]}}
+        </p>
+        <img src="./images/{{id+1}}.jpg" style="width:100%;height:150%">
+    </ion-content>
+</ion-view>
